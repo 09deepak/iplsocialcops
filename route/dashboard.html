@@ -1,0 +1,12 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-xs-12 box" ng-repeat="team in teams | orderBy:'-value'">
+            <div class="">
+                <h3 class="text-center">{{team.Team_Name}}</h3>
+                <p class="text-center">Total Matches Won : {{team.value}}</p>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

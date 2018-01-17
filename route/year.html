@@ -1,0 +1,89 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="text-center">Stats for year 20{{year}}</h1>
+        <br>
+        <div class="row ">
+        <div class="container"> 
+            <div class="col-xs-12 col-sm-4 col-sm-offset-">
+                <div class="picture">
+                    <div class="placeholder ">
+                            <img src="dist/images/red.jpg"  class="img-responsive img-display" alt="Generic placeholder thumbnail">
+                    </div>
+                    <div class="image-data">
+                        <h4>Man Of The Series</h4>
+                        <span class="text-muted display-inline"><strong>Player Name : </strong>{{Man_of_the_Series.Player_Name}}</span>
+                        <span class="text-muted display-inline"><strong>DOB : </strong>{{Man_of_the_Series.DOB}}</span>
+                        <span class="text-muted display-inline"><strong>Batting Hand : </strong>{{Man_of_the_Series.Batting_Hand}}</span>
+                        <span class="text-muted display-inline"><strong>Bowling skill : </strong>{{Man_of_the_Series.Bowling_Skill}}</span>
+                        <span class="text-muted display-inline"><strong>Country : </strong>{{Man_of_the_Series.Country}}</span>
+                    </div>
+                </div>
+            </div>
+          <div class="col-xs-12 col-sm-4 col-sm-offset-">
+                <div class="picture">
+                    <div class="placeholder ">
+                        <img src="dist/images/Orange.jpeg" class="img-responsive img-display" alt="Generic placeholder thumbnail" >
+                    </div>
+                    <div class="image-data">
+                            <h4>Orange Cap Holder</h4>
+                            <span class="text-muted display-inline"><strong>Player Name : </strong>{{Orange_Cap.Player_Name}}</span>
+                            <span class="text-muted display-inline"><strong>DOB : </strong>{{Orange_Cap.DOB}}</span>
+                            <span class="text-muted display-inline"><strong>Batting Hand : </strong>{{Orange_Cap.Batting_Hand}}</span>
+                            <span class="text-muted display-inline"><strong>Bowling skill : </strong>{{Orange_Cap.Bowling_Skill}}</span>
+                            <span class="text-muted display-inline"><strong>Country : </strong>{{Orange_Cap.Country}}</span>
+                    </div>
+                </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+                <div class="picture">
+                    <div class="placeholder ">
+                        <img src="dist/images/purple.png"  class="img-responsive img-display" alt="Generic placeholder thumbnail">
+                    </div>
+                    <div class="image-data">
+                        <h4>Purple Cap Holder</h4>
+                        <span class="text-muted display-inline"><strong>Player Name : </strong>{{Purple_Cap.Player_Name}}</span>
+                        <span class="text-muted display-inline"><strong>DOB : </strong>{{Purple_Cap.DOB}}</span>
+                        <span class="text-muted display-inline"><strong>Bowling skill : </strong>{{Purple_Cap.Bowling_Skill}}</span>
+                        <span class="text-muted display-inline"><strong>Batting Hand : </strong>{{Purple_Cap.Batting_Hand}}</span>
+                        <span class="text-muted display-inline"><strong>Country : </strong>{{Purple_Cap.Country}}</span>
+                    </div>
+                </div>
+           </div>
+      </div>
+    </div>
+
+        <div class="title">
+                <h2 class="text-center">Display</h2>
+        </div> 
+    <div class="row">
+        <div class="container">
+              <div class="table-data">
+                    <div class="table-responsive picture">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Lost</th>
+                                <th>No Result</th>
+                                <th>Team ID</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="team in yearWiseTeamStat | orderBy:'-won'">
+                                <td ng-hide="{{14-team.won}} == 14">{{team.Team_Name}}</td>
+                                <td ng-hide="{{14-team.won}} == 14">{{team.total}}</td>
+                                <td ng-hide="{{14-team.won}} == 14">{{team.won}}</td>
+                                <td ng-hide="{{14-team.won}} == 14">{{14-team.won - team.no_result}}</td>
+                                <td ng-hide="{{14-team.won}} == 14">{{team.no_result}}</td>
+                                <td ng-hide="{{14-team.won}} == 14">{{team.Team_Id}}</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+              </div>
+          </div>
+    </div>
+    </div>

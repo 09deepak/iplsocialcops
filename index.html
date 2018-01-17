@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IPL</title>
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="dist/js/angular.min.js"></script>
+    <script src="dist/js/angular-route.min.js"></script>
+</head>
+<body ng-app="app">
+                <div class="nav-side-menu" ng-controller="mainController">
+                    <div class="nav-side-menu">
+                        <div class="brand">IPL</div>
+                        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+                            <div class="menu-list">
+                                <ul id="menu-content" class="menu-content collapse out">
+                                    <li ng-class="{activate:isActive('/')}" class="text-center"><a href="#!/">Overview</a></li>
+                                    <li ng-class="{activate:isActive('/year/16')}"class="text-center"><a href="#!/year/16">2016</a></li>
+                                    <li ng-class="{activate:isActive('/year/15')}" class="text-center"><a href="#!/year/15">2015</a></li>
+                                    <li ng-class="{activate:isActive('/year/14')}" class="text-center"><a href="#!/year/14">2014</a></li>
+                                    <li ng-class="{activate:isActive('/year/13')}" class="text-center"><a href="#!/year/13">2013</a></li>
+                                    <li ng-class="{activate:isActive('/year/12')}" class="text-center"><a href="#!/year/12">2012</a></li>
+                                    <li ng-class="{activate:isActive('/year/11')}" class="text-center"><a href="#!/year/11">2011</a></li>
+                                    <li ng-class="{activate:isActive('/year/10')}" class="text-center"><a href="#!/year/10">2010</a></li>
+                                    <li ng-class="{activate:isActive('/year/09')}" class="text-center"><a href="#!/year/09">2009</a></li>
+                                    <li ng-class="{activate:isActive('/year/08')}" class="text-center"><a href="#!/year/08">2008</a></li>
+                                </ul>
+                         </div>
+                    </div>
+                </div>
+          <div ng-view></div>
+        
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/underscore-min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
